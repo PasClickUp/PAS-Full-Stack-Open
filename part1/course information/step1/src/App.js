@@ -1,11 +1,15 @@
+const course = 'Half Stack application development'
+const part1 = 'Fundamentals of React'
 const exercises1 = 10
+const part2 = 'Using props to pass data'
 const exercises2 = 7
+const part3 = 'State of a component'
 const exercises3 = 14
 
 const Header = () => {
   return (
     <div>
-      <h1>Half Stack application development</h1>
+      <h1>{course}</h1>
     </div>
   )
 }
@@ -13,9 +17,9 @@ const Header = () => {
 const Content = () => {
   return (
     <div>
-      <p>Fundamentals of React {exercises1}</p>
-      <p>Using props to pass data {exercises2}</p>
-      <p>State of a component {exercises3}</p>
+      <p>{part1} {exercises1}</p>
+      <p>{part2} {exercises2}</p>
+      <p>{part3} {exercises3}</p>
     </div>
   )
 }
