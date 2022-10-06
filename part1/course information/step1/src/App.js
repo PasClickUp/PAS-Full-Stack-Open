@@ -1,3 +1,7 @@
+import Content from "./components/Content"
+import Header from "./components/Header"
+import Total from "./components/Total"
+
 const App = () => {
   const course = 'Half Stack application development'
   const parts = [
@@ -17,11 +21,9 @@ const App = () => {
 
   return (
     <div>
-      <h1>{course}</h1>
-      <p>{parts[0].name} {parts[0].exercises}</p>
-      <p>{parts[1].name} {parts[1].exercises}</p>
-      <p>{parts[2].name} {parts[2].exercises}</p>
-      <h3>Total Number of exercises is {parts[0].exercises + parts[1].exercises + parts[2].exercises}</h3>
+      <Header course={course} />
+      <Content parts={parts} />
+      <Total parts={parts} />
     </div>
   )
 }
