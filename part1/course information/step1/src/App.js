@@ -17,7 +17,11 @@ const App = () => {
 
   return (
     <div>
-      <h3>Total Number of exercises is {part1.exercises + part2.exercises + part3.exercises}</h3>
+      <h1>{course}</h1>
+      <p>{parts[0].name} {parts[0].exercises}</p>
+      <p>{parts[1].name} {parts[1].exercises}</p>
+      <p>{parts[2].name} {parts[2].exercises}</p>
+      <h3>Total Number of exercises is {parts[0].exercises + parts[1].exercises + parts[2].exercises}</h3>
     </div>
   )
 }
