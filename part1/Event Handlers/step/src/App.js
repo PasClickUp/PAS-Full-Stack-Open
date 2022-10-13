@@ -5,6 +5,13 @@ const Display = ({ counter }) => {
   )
 }
 
+const Button = ({ onClick, text }) => {
+  return (
+    <button onClick={onClick}>
+      {text}
+    </button>
+  )
+}
 const App = () => {
   const [counter, setCounter] = useState(0)
 
@@ -15,15 +22,10 @@ const App = () => {
   return (
     <div>
       <Display counter={counter} />
-      <button onClick={increaseByOne}>
-        plus
-      </button>
-      <button onClick={decreaseByOne}>
-        decrease
-      </button>
-      <button onClick={setToZero}>
-        Restart
-      </button>
+
+      <Button onClick={increaseByOne} text="Increase" />
+      <Button onClick={decreaseByOne} text="Decrease" />
+      <Button onClick={setToZero} text="Restart" />
     </div>
   )
 
